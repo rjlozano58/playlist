@@ -24,7 +24,9 @@ h1 {
   width: auto;
   margin: 20px;
 }
-
+.songs{
+  display:grid;
+}
 .songs p {
   font-size: 18px;
 /*   height: 100px; */
@@ -57,6 +59,7 @@ h1 {
   width: 75%;
   margin: 0 auto 20px auto;
   font-size: 18px;
+  background:lightblue;
 }
 
 input {
