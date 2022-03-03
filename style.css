@@ -4,25 +4,27 @@ h1 {
 
 .display {
   display: grid;
-  border-top: 5px solid black;
-  border-bottom: 5px solid black;
   grid-template-rows:repeat(4,fit-content);
   grid-template-columns:20% 20% 20% 20% 20%;
+  grid-border:2px solid black;
 }
 
 .column {
-  padding: 25px 0px;
-  background:red;
+/*   padding: 25px 0px; */
+  border:2px solid lightblue;
+  display:grid;
+  grid-template-rows:auto;
+
+/*   background:red; */
 }
 .images{
-  background:green;
+/*   background:green; */
 }
 
 .images img {
-  display: block;
-  height: 100px;
-  width: auto;
-  margin: 20px;
+  max-width:90%;
+  display:flex;
+  justify-content:center;
 }
 .songs{
   display:grid;
@@ -31,19 +33,19 @@ h1 {
   font-size: 18px;
 /*   height: 100px; */
   font-weight: bold;
-  margin: 20px;
+/*   margin: 20px; */
 }
 
 .artists p {
   font-size: 18px;
 /*   height: 100px; */
-  margin: 20px;
+/*   margin: 20px; */
 }
 
 .lengths p {
   font-size: 16px;
 /*   height: 100px; */
-  margin: 20px;
+/*   margin: 20px; */
   text-align: right;
 }
 
@@ -52,7 +54,7 @@ h1 {
   font-size: 18px;
 /*   height: 100px; */
   font-weight: bold;
-  margin: 20px;
+/*   margin: 20px; */
 }
 
 .form {
@@ -65,9 +67,20 @@ h1 {
 input {
   padding: 5px 10px;
   font-size: 14px;
+  outline:none;
 }
 
 button {
   font-size: 14px;
   padding: 5px 10px;
+}
+
+.box{
+  background:grey;;
+}
+.box.text{
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
