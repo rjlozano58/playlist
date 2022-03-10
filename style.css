@@ -33,6 +33,8 @@ h1 {
   font-size: 18px;
 /*   height: 100px; */
   font-weight: bold;
+  color:white;
+  font-weight:600;
 /*   margin: 20px; */
 }
 
@@ -76,7 +78,7 @@ button {
 }
 
 .box{
-  background:grey;;
+  background:navy;
 }
 .box.text{
   text-align:center;

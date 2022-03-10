@@ -2,24 +2,54 @@
 var songTitles = ["ASTROTHUNDER","Paint It, Black","Love is Only a Feeling"];
 var songArtists = ["Travis Scott", "The Rolling Stones", "Joey Bada$$"];
 var songLinks = ["https://www.youtube.com/watch?v=Pa67b28h0vY","https://www.youtube.com/watch?v=O4irXQhgMqg","https://www.youtube.com/watch?v=93ufch_2mfw"];
-var songImages = ["https://townsquare.media/site/812/files/2018/07/travis-scott-astroworld-cover-art-full.jpg?w=1080&q=75","https://upload.wikimedia.org/wikipedia/en/5/58/Paint_It_Black_UK_sleeve.jpg","https://direct.rhapsody.com/imageserver/images/alb.266944359/600x600.jpg"]
-var songLengths = ["2:22","3:43","2:33"]
+var songImages = ["https://townsquare.media/site/812/files/2018/07/travis-scott-astroworld-cover-art-full.jpg?w=1080&q=75","https://upload.wikimedia.org/wikipedia/en/5/58/Paint_It_Black_UK_sleeve.jpg","https://direct.rhapsody.com/imageserver/images/alb.266944359/600x600.jpg"];
+var songLengths = ["2:22","3:43","2:33"];
+var ASTROTHUNDER = {
+  title:"ASTROTHUNDER",
+  artist:"Travis Scott",
+  link:"https://www.youtube.com/watch?v=Pa67b28h0vY",
+  imgURL:"https://townsquare.media/site/812/files/2018/07/travis-scott-astroworld-cover-art-full.jpg?w=1080&q=75",
+  length:"2:22"
+}
+var PaintItBlack = {
+  title:"Paint It, Black",
+  artist:"The Rolling Stones",
+  link:"https://www.youtube.com/watch?v=O4irXQhgMqg",
+  imgURL:"https://upload.wikimedia.org/wikipedia/en/5/58/Paint_It_Black_UK_sleeve.jpg",
+  length:"3:43"
+}
+
+var LoveIsOnlyAFeeling = {
+  title:"Love Is Only A Feeling",
+  artist:"Joey Bada$$",
+  link:"https://www.youtube.com/watch?v=93ufch_2mfw",
+  imgURL:"https://direct.rhapsody.com/imageserver/images/alb.266944359/600x600.jpg",
+  length:"2:33"
+}
+var songs = [ASTROTHUNDER,PaintItBlack,LoveIsOnlyAFeeling];
 function displaySongInfo() {
   // Complete the Day 2 goals inside this function
-  songTitles.forEach(function(song){
-    $(".songs").append(`<div class="box text">${song}</div>`);
-  });
-  songArtists.forEach(function(artist){
-    $(".artists").append(`<div class="box text" text>${artist}</div>`);
-  });
-  songLinks.forEach(function(link){
-    $(".links").append(`<div class="box text"><a class="link-text" href=${link}>${link}</a></div>`);
-  });
-  songImages.forEach(function(image){
-    $(".images").append(`<div class="box"><img src=${image}></div>`);
-  });
-  songLengths.forEach(function(length){
-    $(".lengths").append(`<div class="box text">${length}</div>`);
+  // songTitles.forEach(function(song){
+  //   $(".songs").append(`<div class="box text">${song}</div>`);
+  // });
+  // songArtists.forEach(function(artist){
+  //   $(".artists").append(`<div class="box text" text>${artist}</div>`);
+  // });
+  // songLinks.forEach(function(link){
+  //   $(".links").append(`<div class="box text"><a class="link-text" href=${link}>${link}</a></div>`);
+  // });
+  // songImages.forEach(function(image){
+  //   $(".images").append(`<div class="box"><img src=${image}></div>`);
+  // });
+  // songLengths.forEach(function(length){
+  //   $(".lengths").append(`<div class="box text">${length}</div>`);
+  // });
+  songs.forEach(function(song){
+    $(".songs").append(`<div class="box text">${song.title}</div>`);
+    $(".artists").append(`<div class="box text" text>${song.artist}</div>`);
+    $(".links").append(`<div class="box text"><a class="link-text" href=${song.link}>${song.link}</a></div>`);
+    $(".images").append(`<div class="box"><img src=${song.imgURL}></div>`);
+    $(".lengths").append(`<div class="box text">${song.length}</div>`);
   });
   }
 
