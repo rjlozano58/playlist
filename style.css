@@ -4,66 +4,46 @@ h1 {
 
 .display {
   display: grid;
+  width:100vw;
   grid-template-rows:repeat(4,fit-content);
-  grid-template-columns:20% 20% 20% 20% 20%;
-  grid-border:2px solid black;
+  grid-auto-rows:fit-content;
+  grid-template-columns:repeat(5,20%);
+  border:5px solid hotpink;
 }
 
 .column {
 /*   padding: 25px 0px; */
-  border:2px solid lightblue;
   display:grid;
-  grid-template-rows:auto;
+  grid-auto-rows:fit-content;
+  color:hotpink;
 
 /*   background:red; */
 }
-.images{
-/*   background:green; */
-}
 
-.images img {
-  max-width:90%;
-  display:flex;
-  justify-content:center;
+.box img {
+  max-width:100%;
+  display:block;
+  margin:0 auto;
 }
-.songs{
-  display:grid;
+/* .songs{
+
+} */
+.link-text{
+  overflow-wrap:break-word;
+  transition:0.2s;
 }
-.songs p {
-  font-size: 18px;
-/*   height: 100px; */
-  font-weight: bold;
+.link-text:hover{
+  text-shadow:0 0 10px white;
   color:white;
-  font-weight:600;
-/*   margin: 20px; */
+  text-decoration:none;
 }
 
-.artists p {
-  font-size: 18px;
-/*   height: 100px; */
-/*   margin: 20px; */
-}
-
-.lengths p {
-  font-size: 16px;
-/*   height: 100px; */
-/*   margin: 20px; */
-  text-align: right;
-}
-
-.links a {
-  display: block;
-  font-size: 18px;
-/*   height: 100px; */
-  font-weight: bold;
-/*   margin: 20px; */
-}
 
 .form {
   width: 75%;
   margin: 0 auto 20px auto;
   font-size: 18px;
-  background:lightblue;
+/*   background:lightblue; */
 }
 
 input {
@@ -78,11 +58,23 @@ button {
 }
 
 .box{
-  background:navy;
+  background:black;
+  border-left:1px solid white;
+  border-right:1px solid white;
 }
+
+
+/* This is a practice grid */
 .box.text{
   text-align:center;
   display:flex;
   flex-direction:column;
   justify-content:center;
+}
+
+
+@media only screen and (max-width: 600px){
+  .display{
+    
+  }
 }

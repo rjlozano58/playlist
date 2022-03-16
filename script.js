@@ -47,7 +47,7 @@ function displaySongInfo() {
   songs.forEach(function(song){
     $(".songs").append(`<div class="box text">${song.title}</div>`);
     $(".artists").append(`<div class="box text" text>${song.artist}</div>`);
-    $(".links").append(`<div class="box text"><a class="link-text" href=${song.link}>${song.link}</a></div>`);
+    $(".links").append(`<a class=" box text link-text" target="blank_" href=${song.link}>${song.link}</a>`);
     $(".images").append(`<div class="box"><img src=${song.imgURL}></div>`);
     $(".lengths").append(`<div class="box text">${song.length}</div>`);
   });
@@ -67,16 +67,29 @@ function emptySongInfo() {
 
 function addSongInfo() {
   // Complete Day 3 goals inside this function
+  // let newSongTitle = $(".title").val();
+  // songTitles.push(newSongTitle);
+  // let newArtistName = $(".artist").val();
+  // songArtists.push(newArtistName);
+  // let newLink = $(".link").val();
+  // songLinks.push(newLink);
+  // let newImage = $(".image").val();
+  // songImages.push(newImage);
+  // let newLength = $(".song-length").val();
+  // songLengths.push(newLength);
   let newSongTitle = $(".title").val();
-  songTitles.push(newSongTitle);
-  let newArtistName = $(".artist").val();
-  songArtists.push(newArtistName);
-  let newLink = $(".link").val();
-  songLinks.push(newLink);
-  let newImage = $(".image").val();
-  songImages.push(newImage);
-  let newLength = $(".song-length").val();
-  songLengths.push(newLength);
+  let newSongArtist = $(".artist").val();
+  let newSongLink = $(".link").val();
+  let newSongImage = $(".image").val();
+  let newSongLength = $(".song-length").val();
+  let newSong = {
+    title:newSongTitle,
+    artist:newSongArtist,
+    link:newSongLink,
+    imgURL:newSongImage,
+    length:newSongLength
+  }
+  songs.push(newSong);
 }
 
 $(".add").click(function () {
